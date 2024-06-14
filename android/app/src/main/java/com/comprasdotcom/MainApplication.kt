@@ -1,4 +1,4 @@
-package com.pokecatch
+package com.comprasdotcom
 
 import android.app.Application
 import com.facebook.react.PackageList

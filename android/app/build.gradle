@@ -74,9 +74,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.pokecatch"
+    namespace "com.comprasdotcom"
     defaultConfig {
-        applicationId "com.pokecatch"
+        applicationId "com.comprasdotcom"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
