@@ -15,6 +15,7 @@
       "@helpers/*": ["./src/utils/helpers/*"],
       "@constants/*": ["./src/utils/constants/*"],
       "@tests/*": ["./src/utils/tests/*"]
-    }
+    },
+    "allowJs": true
   }
 }
