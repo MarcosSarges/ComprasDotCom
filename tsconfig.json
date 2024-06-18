@@ -7,7 +7,7 @@
       "@services/*": ["./src/services/*"],
       "@screens/*": ["./src/screens/*"],
       "@routes/*": ["./src/routes/*"],
-      "@components": ["./src/components"],
+      "@components/*": ["./src/components/*"],
       "@store/*": ["./src/store/*"],
       "@domain/*": ["src/domain/*"],
       "@styles/*": ["./src/styles/*"],
@@ -16,7 +16,8 @@
       "@interfaces/*": ["src/interfaces/*"],
       "@helpers/*": ["./src/utils/helpers/*"],
       "@constants/*": ["./src/utils/constants/*"],
-      "@tests/*": ["./src/utils/tests/*"]
+      "@tests/*": ["./src/utils/tests/*"],
+      "@tests": ["./src/utils/tests"]
     },
     "allowJs": true
   }

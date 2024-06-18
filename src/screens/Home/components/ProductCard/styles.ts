@@ -20,7 +20,9 @@ export const ProductImage = styled.Image.attrs({
   height: 200px;
   align-self: center;
 `;
-export const ProductName = styled.Text`
+export const ProductName = styled.Text.attrs({
+  numberOfLines: 2,
+})`
   padding-top: ${({ theme }) => theme.spacings.sm};
   font-size: ${({ theme }) => theme.sizes.lg};
 `;
@@ -30,4 +32,21 @@ export const ProductPrice = styled.Text`
   padding-top: ${({ theme }) => theme.spacings.sm};
   font-size: ${({ theme }) => theme.sizes.md};
   color: ${({ theme }) => theme.colors.text.default};
+`;
+
+export const Row = styled.View`
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+`;
+
+export const CartButton = styled.TouchableOpacity<{ add?: boolean }>`
+  height: 25px;
+  width: 25px;
+  border-radius: 12.5px;
+  background-color: ${({ theme, add }) =>
+    theme.colors[add ? "success" : "danger"].main};
+  margin-left: ${({ theme }) => theme.spacings.sm};
+  align-items: center;
+  justify-content: center;
 `;

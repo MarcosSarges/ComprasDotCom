@@ -1,4 +1,4 @@
-import { add, multiply, subtract, divide } from "../moneyCalc";
+import { add, multiply, subtract, divide, formatMoney } from "../moneyCalc";
 
 describe("moneyCalc", () => {
   describe("add", () => {
@@ -35,6 +35,14 @@ describe("moneyCalc", () => {
     it("should handle division by zero", () => {
       expect(divide(10, 0)).toBe(Infinity);
       expect(divide(-5, 0)).toBe(-Infinity);
+    });
+  });
+
+  describe("formatMoney", () => {
+    it("should format money correctly", () => {
+      expect(formatMoney(10)).toMatch("R$10,00");
+      expect(formatMoney(0.1)).toMatch("R$0,10");
+      expect(formatMoney(1234.5678)).toMatch("R$1.234,57");
     });
   });
 });

@@ -1,16 +1,20 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "@screens/Home";
-import Header from "./components/Header";
 import Cart from "@screens/Cart";
 
-const Stack = createStackNavigator();
+export type RootStackParamList = {
+  Home: undefined;
+  Cart: undefined;
+};
+
+const Stack = createStackNavigator<RootStackParamList>();
 
 const RootRouter: React.FC = () => {
   return (
     <Stack.Navigator
       screenOptions={{
-        header: (props) => <Header {...props} />,
+        header: () => null,
       }}
     >
       <Stack.Screen name="Home" component={Home} />

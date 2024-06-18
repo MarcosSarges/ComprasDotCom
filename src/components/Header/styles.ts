@@ -28,3 +28,18 @@ export const BackContainer = styled.TouchableOpacity`
   top: ${({ theme }) => theme.insets.top + pxOnlyNumber(theme.spacings.sm)}px;
   left: ${({ theme }) => theme.spacings.md};
 `;
+
+export const CartBadge = styled.View`
+  position: absolute;
+  right: 0px;
+  background-color: ${({ theme }) => theme.colors.danger.main};
+  height: 15px;
+  width: 15px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7.5px;
+`;
+export const Badge = styled.Text`
+  color: ${({ theme }) => theme.colors.commons.white};
+  font-size: ${({ theme }) => theme.sizes.xs};
+`;

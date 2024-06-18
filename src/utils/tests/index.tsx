@@ -1,14 +1,13 @@
+import React from "react";
 import { ThemeProvider } from "styled-components/native";
-import "@testing-library/jest-native/extend-expect";
-import theme from "@styles";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import {
   render as renderTestLibrary,
   screen,
   fireEvent,
   waitFor,
 } from "@testing-library/react-native";
-import React from "react";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import theme from "@styles";
 
 const insets = {
   top: 0,
