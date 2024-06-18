@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./styles";
 import IProduct from "@domain/IProduct";
-import Icon from "react-native-vector-icons/FontAwesome";
+import ButtonCart from "@components/ButtonCart";
 
 interface IProductCard extends IProduct {
   onAdd: () => void;
@@ -20,14 +20,7 @@ const ProductCard: React.FC<IProductCard> = ({
       <S.ProductImage source={{ uri: image }} />
       <S.ProductName>{title}</S.ProductName>
       <S.ProductPrice>R$ {price}</S.ProductPrice>
-      <S.Row>
-        <S.CartButton onPress={onRemove}>
-          <Icon name="minus" size={15} color={"white"} />
-        </S.CartButton>
-        <S.CartButton add onPress={onAdd}>
-          <Icon name="plus" size={15} color={"white"} />
-        </S.CartButton>
-      </S.Row>
+      <ButtonCart onAdd={onAdd} onRemove={onRemove} />
     </S.ProductCard>
   );
 };

@@ -9,7 +9,6 @@ interface HeaderProps {
   title: string;
   showBack?: boolean;
   showTitle?: boolean;
-  showSearch?: boolean;
   showCart?: boolean;
 }
 
@@ -17,7 +16,6 @@ const Header: React.FC<HeaderProps> = ({
   title,
   showBack = false,
   showCart = false,
-  showSearch = false,
   showTitle = false,
 }) => {
   const { navigate, goBack } =
